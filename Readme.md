@@ -15,3 +15,5 @@ docekr-compose
 (ID形如:`course-v1:ynu_ustcX+LB0520372,XXXXXXX`)  
 
 执行start.sh即可
+
+[查询地址](http://progress.xuetangx.dev.ynuosa.org/)
