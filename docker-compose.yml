@@ -1,0 +1,5 @@
+mooc:
+  build: .
+  ports:
+    - "8880:5000/tcp"
+  command: python /app/MOOC.py

@@ -1,0 +1,35 @@
+{% extends "header.html" %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ classname }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <div class="input-group-addon"><span class="glyphicon-user glyphicon"></span></div>
+                    <input type="text" class="form-control" placeholder="请输入学号" id="id">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <a class="btn btn-info btn-block" onclick="jump()">查询</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function jump() {
+            window.location.href = "/{{ alias }}/" + $("#id").val()
+        }
+        document.getElementById("id").onkeydown = function (e) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 13) {
+                jump()
+            }
+        }
+    </script>
+{% endblock %}
